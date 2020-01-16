@@ -1,9 +1,9 @@
 ### 美团外卖APP
 
-#### 第一次提交
+#### 第一次提交(2019年1月15日)
     搭建项目基础架构
     实现底部导航栏
-#### 第二次提交
+#### 第二次提交(2019年1月16日)
 ``` javascript
 px转rem函数
 
@@ -11,4 +11,18 @@ px转rem函数
     $rem: 37.5px;
     @return ($px / $rem) + rem;
 }
+
+安装sass-resources-loader, 配置dev。全局应用px2rem。
+
+{ test: /\.scss$/ , use: ['style-loader', 'css-loader', 'sass-loader', {
+    loader: 'sass-resources-loader',
+    options: {
+        resources: srcRoot + '/component/common.scss'
+    }
+}
+```
+```
+eslint配置
+安装eslint、eslint-loader、eslint-plugin-react
+配置.eslintrc
 ```

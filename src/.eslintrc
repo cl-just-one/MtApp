@@ -1,0 +1,12 @@
+{
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parser": "babel-eslint",
+    "globals": {
+        "window": true,
+        "document": true,
+        "module": true
+    },
+    "rules": {
+        "react/prop-types": "off"
+    }
+}
