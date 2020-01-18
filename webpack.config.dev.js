@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -47,7 +48,8 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   devServer: {
-    contentBase: devPath 
+    contentBase: devPath,
+    hot: true
   },
   output: {
     path: devPath,
@@ -66,5 +68,8 @@ module.exports = {
       { test: /\.(png|jpg|jpeg)$/ , use: 'url-loader?limit=8192', include: srcRoot}
     ]
   },
-  plugins: [].concat(htmlArray)
+  plugins: [
+    new webpack.NamedModulesPlugin,
+    new webpack.HotModuleReplacementPlugin
+  ].concat(htmlArray)
 };

@@ -26,3 +26,17 @@ eslint配置
 安装eslint、eslint-loader、eslint-plugin-react
 配置.eslintrc
 ```
+#### 第三次提交(2019年1月18日)
+```
+配置项目热更新
+安装react-hot-loader
+配置
+devserver: {
+    hot: true
+}
+plugins: [
+    new webpack.NamedModulesPlugin,
+    new webpack.HotModuleReplacementPlugin
+]
+修改Main、store.js模块
+```
